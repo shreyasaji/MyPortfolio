@@ -121,20 +121,6 @@ export function ProjectsSection() {
                   </div>
                   
                   <div className="flex gap-3 pt-4 border-t border-purple-100">
-                    <a
-                      href="#"
-                      className="flex items-center gap-2 text-purple-600 hover:text-purple-800 transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>View Details</span>
-                    </a>
-                    <a
-                      href="#"
-                      className="flex items-center gap-2 text-purple-600 hover:text-purple-800 transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      <span>Source Code</span>
-                    </a>
                   </div>
                 </div>
               </div>

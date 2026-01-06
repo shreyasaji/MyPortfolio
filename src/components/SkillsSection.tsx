@@ -20,9 +20,9 @@ export function SkillsSection() {
       color: 'pink',
       skills: [
         { name: 'React', level: 85 },
-        { name: 'HTML/CSS', level: 90 },
-        { name: 'Tailwind CSS', level: 85 },
-        { name: 'Vite', level: 80 },
+        { name: 'HTML/CSS', level: 80 },
+        { name: 'Tailwind CSS', level: 80 },
+        { name: 'Vite', level: 85 },
       ],
     },
     {

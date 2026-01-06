@@ -151,9 +151,12 @@ export function CertificationsSection() {
                             <h4 className="text-xl text-purple-900 mb-1">{edu.degree}</h4>
                             <p className="text-purple-600 font-medium">{edu.institution}</p>
                           </div>
-                          <span className={`px-4 py-1 bg-gradient-to-r ${edu.color} bg-opacity-10 text-purple-700 rounded-full text-sm font-medium whitespace-nowrap ml-4`}>
-                            {edu.period}
-                          </span>
+                          <span
+  className={`px-4 py-1 bg-gradient-to-r ${edu.color} bg-opacity-10 text-white rounded-full text-sm font-medium whitespace-nowrap ml-4`}
+>
+  {edu.period}
+</span>
+
                         </div>
                         
                         <p className="text-gray-600 mb-3">{edu.description}</p>

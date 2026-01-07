@@ -5,6 +5,7 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { CertificationsSection } from './components/CertificationsSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ContactSection } from './components/ContactSection';
+import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { Code2, Sparkles, Briefcase, Award, Lightbulb, Mail } from 'lucide-react';
 
 type Tab = 'about' | 'projects' | 'certifications' | 'skills' | 'contact';
@@ -49,24 +50,22 @@ export default function App() {
                 Undergraduate Student
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Computing in Computer Science at Nanyang Technological University, Singapore
+                Bachelor of Computing (Hons) in Computer Science at Nanyang Technological University, Singapore
               </p>
               <div className="flex flex-wrap gap-4">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveTab('projects')}
+                  onClick={() => {
+                    setActiveTab('projects');
+                    setTimeout(() => {
+                      const contentSection = document.getElementById('content-section');
+                      contentSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                  }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
                 >
                   View My Work
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveTab('contact')}
-                  className="px-8 py-4 bg-white text-purple-600 rounded-full border-2 border-purple-300 hover:border-purple-400 transition-colors"
-                >
-                  Get In Touch
                 </motion.button>
               </div>
             </motion.div>
@@ -78,25 +77,13 @@ export default function App() {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-3xl blur-2xl" />
-              <div className="relative bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-purple-200 shadow-xl">
-                <div className="flex items-center gap-3 mb-6">
-                  <Sparkles className="w-6 h-6 text-orange-600" />
-                  <h3 className="text-xl text-purple-900">Beyond the Code</h3>
-                </div>
-                <div className="space-y-4 text-gray-700">
-                  <p className="flex items-start gap-3">
-                    <span className="text-2xl">💃</span>
-                    <span>Bharatanatyam dancer since age 5</span>
-                  </p>
-                  <p className="flex items-start gap-3">
-                    <span className="text-2xl">📸</span>
-                    <span>Photography enthusiast</span>
-                  </p>
-                  <p className="flex items-start gap-3">
-                    <span className="text-2xl">🤖</span>
-                    <span>AI & ML explorer</span>
-                  </p>
-                </div>
+              <div className="relative">
+                <ImageWithFallback
+                  src="/shreya.jpeg"
+                  alt="Shreya Saji"
+                  className="w-full h-auto rounded-3xl shadow-2xl border-4 border-white/50"
+                />
+
               </div>
             </motion.div>
           </div>
@@ -138,7 +125,7 @@ export default function App() {
             </motion.nav>
 
             {/* Main Content */}
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0" id="content-section">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}

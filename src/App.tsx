@@ -50,7 +50,7 @@ export default function App() {
                 Undergraduate Student
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Bachelor of Computing (Hons) in Computer Science at Nanyang Technological University, Singapore
+                Computing in Computer Science at Nanyang Technological University, Singapore
               </p>
               <div className="flex flex-wrap gap-4">
                 <motion.button

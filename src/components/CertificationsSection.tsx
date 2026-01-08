@@ -152,11 +152,10 @@ export function CertificationsSection() {
                             <p className="text-purple-600 font-medium">{edu.institution}</p>
                           </div>
                           <span
-  className={`px-4 py-1 bg-gradient-to-r ${edu.color} bg-opacity-10 text-white rounded-full text-sm font-medium whitespace-nowrap ml-4`}
->
-  {edu.period}
-</span>
-
+                            className={`px-4 py-1 bg-gradient-to-r ${edu.color} bg-opacity-10 text-white rounded-full text-sm font-medium whitespace-nowrap ml-4`}
+                          >
+                          {edu.period}
+                        </span>
                         </div>
                         
                         <p className="text-gray-600 mb-3">{edu.description}</p>

@@ -15,7 +15,7 @@ export function ProjectsSection() {
       title: 'Schoolsearch Project',
       description: 'Collaborated in a team to develop a full-stack web application enabling Singapore students to input their address and scores to receive a proximity-ranked list of schools with advanced filtering and peer reviews.',
       tech: ['Java', 'React', 'Vite', 'Java Spring Boot'],
-      year: 'Grade 12',
+      year: 'Year 2',
       category: 'Full-Stack',
       gradient: 'from-pink-500 to-orange-500',
     },

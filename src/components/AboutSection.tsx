@@ -24,7 +24,6 @@ const photographyImages = [
   '/photography/photo8.jpg',
 ];
 
-
   return (
     <div>
       <motion.div
@@ -53,6 +52,59 @@ const photographyImages = [
             environments, continuously seek to improve my technical skills, and am eager to take on 
             opportunities that allow me to learn, innovate, and make a meaningful impact.
           </p>
+        </div>
+
+        {/* What Drives Me */}
+        <div className="space-y-4 mb-12">
+          <h3 className="text-2xl text-purple-900 mb-6">What Drives Me</h3>
+          
+          {[
+            {
+              icon: Target,
+              title: 'Problem-Solving Mindset',
+              description: 'I approach every challenge as an opportunity to learn and create elegant solutions.',
+              color: 'purple',
+            },
+            {
+              icon: Zap,
+              title: 'Continuous Innovation',
+              description: 'Always exploring new technologies and methodologies to stay at the cutting edge.',
+              color: 'pink',
+            },
+            {
+              icon: Heart,
+              title: 'Collaborative Spirit',
+              description: 'I believe the best solutions come from diverse perspectives and teamwork.',
+              color: 'blue',
+            },
+            {
+              icon: GraduationCap,
+              title: 'Lifelong Learning',
+              description: 'From AI/ML to full-stack development, I\'m constantly expanding my knowledge.',
+              color: 'orange',
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 + index * 0.1 }}
+              className="flex items-start gap-4 p-4 rounded-xl bg-white/80 border border-purple-100 hover:shadow-md transition-shadow"
+            >
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-${item.color}-400 to-${item.color}-600 flex items-center justify-center flex-shrink-0`}>
+                <item.icon className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h4 className="text-lg text-gray-900 mb-1">{item.title}</h4>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Hobbies Section */}
+        <div className="mb-8">
+          <h3 className="text-2xl text-purple-900 mb-6">Hobbies</h3>
         </div>
 
         {/* Creative Interests Section */}
@@ -151,54 +203,6 @@ const photographyImages = [
             </motion.div>
           </motion.div>
         )}
-
-        {/* What Drives Me */}
-        <div className="space-y-4">
-          <h3 className="text-2xl text-purple-900 mb-6">What Drives Me</h3>
-          
-          {[
-            {
-              icon: Target,
-              title: 'Problem-Solving Mindset',
-              description: 'I approach every challenge as an opportunity to learn and create elegant solutions.',
-              color: 'purple',
-            },
-            {
-              icon: Zap,
-              title: 'Continuous Innovation',
-              description: 'Always exploring new technologies and methodologies to stay at the cutting edge.',
-              color: 'pink',
-            },
-            {
-              icon: Heart,
-              title: 'Collaborative Spirit',
-              description: 'I believe the best solutions come from diverse perspectives and teamwork.',
-              color: 'blue',
-            },
-            {
-              icon: GraduationCap,
-              title: 'Lifelong Learning',
-              description: 'From AI/ML to full-stack development, I\'m constantly expanding my knowledge.',
-              color: 'orange',
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + index * 0.1 }}
-              className="flex items-start gap-4 p-4 rounded-xl bg-white/80 border border-purple-100 hover:shadow-md transition-shadow"
-            >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-${item.color}-400 to-${item.color}-600 flex items-center justify-center flex-shrink-0`}>
-                <item.icon className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h4 className="text-lg text-gray-900 mb-1">{item.title}</h4>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </motion.div>
     </div>
   );

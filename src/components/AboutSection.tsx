@@ -34,7 +34,7 @@ const photographyImages = [
       >
         <div className="mb-8">
           <h2 className="text-4xl mb-2 bg-gradient-to-r from-purple-900 to-pink-800 bg-clip-text text-transparent">
-            Hello, I'm Shreya
+            Hello, I'm Shreya!
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6" />
         </div>

@@ -21,6 +21,15 @@ export function CertificationsSection() {
       icon: Award,
       color: 'from-blue-400 to-purple-500',
     },
+    {
+      title: 'Google AI essentials',
+      issuer: 'Coursera',
+      date: 'January 2026',
+      status: 'Certified',
+      description: 'A foundational course that introduces core artificial intelligence concepts, practical AI tools, and responsible AI use for real-world applications.',
+      icon: Award,
+      color: 'from-blue-400 to-purple-500',
+    },
   ];
 
   const education = [

@@ -6,7 +6,7 @@ export function CertificationsSection() {
     {
       title: 'Agentic AI Hackathon 2025',
       issuer: 'SimplifyNext × AWS',
-      date: 'January 2025',
+      date: 'September 2025',
       status: 'Semi-finalist',
       description: 'Competed in a prestigious AI hackathon, reaching the semi-finals with innovative solutions.',
       icon: Trophy,
@@ -15,7 +15,7 @@ export function CertificationsSection() {
     {
       title: 'Artificial Intelligence Foundations: Machine Learning',
       issuer: 'LinkedIn Learning',
-      date: '2024',
+      date: 'August 2025',
       status: 'Certified',
       description: 'Comprehensive course covering ML fundamentals and AI applications.',
       icon: Award,

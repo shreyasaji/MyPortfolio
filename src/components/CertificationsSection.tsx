@@ -30,6 +30,15 @@ export function CertificationsSection() {
       icon: Award,
       color: 'from-blue-400 to-purple-500',
     },
+    {
+      title: 'Google Foundations of Cybersecurity',
+      issuer: 'Coursera',
+      date: 'January 2026',
+      status: 'Certified',
+      description: 'A foundational program that introduces core cybersecurity principles, common threats, risk management, and best practices for protecting systems and data.',
+      icon: Award,
+      color: 'from-blue-400 to-purple-500',
+    },
   ];
 
   const education = [
